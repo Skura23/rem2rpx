@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    1 rem = <input type="text" placeholder="40" /> px
+    1 rem = <input type="text" id="pxVal" value="20" /> px
     <div>
         <textarea class='csstext' placeholder='your css...'></textarea>
         <textarea class='result' placeholder='result...'></textarea>
@@ -22,7 +22,7 @@
         }
     </style>
     <script>
-        var basePxSize = 40;
+        var basePxSize = $('#pxVal').val();
         var findPX = new RegExp('[^ ]+(?=rem)', 'g');
 
         var last = new RegExp('(\\d$)', '');
